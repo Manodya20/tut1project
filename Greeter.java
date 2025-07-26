@@ -15,6 +15,10 @@ public class Greeter {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
     return messages.getString("greeting") + ", **" + name + "**";
   }
+if (args.length < 3) {
+    System.out.println("Usage: java Greeter <language> <country> <name>");
+    return;
+  }
 
   public static void main(String[] args) {
     String language = args[0];
